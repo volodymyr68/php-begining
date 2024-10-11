@@ -1,5 +1,6 @@
 <?php
-require ("./scripts/fourth-hw/main.php")
+require __DIR__ . "/vendor/autoload.php";
+require ("./scripts/fifthHw/main.php")
 ?>
 <!doctype html>
 <html lang="en">
