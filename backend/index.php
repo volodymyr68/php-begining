@@ -1,5 +1,5 @@
 <?php
-require ("./scripts/third-hw/main.php")
+require ("./scripts/fourth-hw/main.php")
 ?>
 <!doctype html>
 <html lang="en">
