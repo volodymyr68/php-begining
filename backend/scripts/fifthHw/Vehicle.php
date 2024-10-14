@@ -4,9 +4,9 @@ namespace Palmo\Core\fifthHw;
 
 abstract class Vehicle
 {
-    private string $brand;
-    private string $model;
-    private int $year;
+    protected string $brand;
+    protected string $model;
+    protected int $year;
 
     function __construct($brand, $model, $year)
     {
@@ -15,13 +15,11 @@ abstract class Vehicle
         $this->year = $year;
     }
 
-    abstract public function calculateRentalCost(int $days):float;
+    abstract public function calculateRentalCost(int $days): float;
 
-    public function getInfo(): void
+    public function getInfo(): string
     {
-        echo "Brand: " . $this->brand . "\n";
-        echo "Model: " . $this->model . "\n";
-        echo "Year: " . $this->year . "\n";
+        return "Brand: " . $this->brand . ", Model: " . $this->model. ", Year: " . $this->year;
     }
 
 }

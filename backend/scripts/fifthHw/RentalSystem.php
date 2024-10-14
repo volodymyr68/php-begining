@@ -13,7 +13,8 @@ class RentalSystem
     /**
      * @throws \Exception
      */
-    public function rentVehicle(Vehicle $vehicle, int $days, string $cardNumber, string $expirationDate): string{
+    public function rentVehicle(Vehicle $vehicle, int $days, string $cardNumber, string $expirationDate): string
+    {
         $rentSum = $vehicle->calculateRentalCost($days);
         $payment = new CreditCardPayment($cardNumber,$expirationDate);
         return $payment->processPayment($rentSum);

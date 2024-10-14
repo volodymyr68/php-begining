@@ -15,7 +15,7 @@ class CreditCardPayment implements PaymentMethod
         $this->expirationDate = $expirationDate;
     }
 
-    public function processPayment(float $amount): string
+    public function processPayment(float $amount): bool
     {
         if ($this->cardNumber == null) {
             throw new Exception("Card number is invalid.");
@@ -26,6 +26,6 @@ class CreditCardPayment implements PaymentMethod
         if (strtotime($this->expirationDate) < time()) {
             throw new Exception("Card has expired.");
         }
-        return "Payment on " . $amount . " successful";
+        return true;
     }
 }

@@ -4,5 +4,5 @@ namespace Palmo\Core\fifthHw;
 
 interface PaymentMethod
 {
-    public function processPayment(float $amount): string;
+    public function processPayment(float $amount): bool;
 }
